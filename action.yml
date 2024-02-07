@@ -35,4 +35,4 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/mikian/action-reviewdog-undercover:main'
