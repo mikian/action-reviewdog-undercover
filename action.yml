@@ -1,0 +1,38 @@
+name: ReviewDog Undercover
+description: Runs Undercover for reviewdog
+author: mikian
+
+inputs:
+  github_token:
+    description: 'GITHUB_TOKEN.'
+    default: '${{ github.token }}'
+  ### Flags for reviewdog ###
+  level:
+    description: 'Report level for reviewdog [info,warning,error]'
+    default: 'error'
+  reporter:
+    description: 'Reporter of reviewdog command [github-check,github-pr-review].'
+    default: 'github-check'
+  filter_mode:
+    description: |
+      Filtering mode for the reviewdog command [added,diff_context,file,nofilter].
+      Default is added.
+    default: 'added'
+  fail_on_error:
+    description: |
+      Exit code for reviewdog when errors are found [true,false]
+      Default is `false`.
+    default: 'false'
+  reviewdog_flags:
+    description: 'Additional reviewdog flags'
+    default: ''
+  lcov:
+    description: Path for Lcov file.
+    default: coverage/workspace.lcov
+  ref:
+    description: Git Ref to compare against
+    default: '${{ github.base_ref }}'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

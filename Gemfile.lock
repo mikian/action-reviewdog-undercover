@@ -1,0 +1,33 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.4.2)
+    bigdecimal (3.1.6)
+    imagen (0.1.8)
+      parser (>= 2.5, != 2.5.1.1)
+    parser (3.3.0.5)
+      ast (~> 2.4.1)
+      racc
+    racc (1.7.3)
+    rainbow (3.1.1)
+    rexml (3.2.6)
+    rugged (1.7.2)
+    undercover (0.5.0)
+      bigdecimal
+      imagen (>= 0.1.8)
+      rainbow (>= 2.1, < 4.0)
+      rugged (>= 0.27, < 1.8)
+    undercover-checkstyle (0.3.0)
+      rexml
+      undercover (>= 0.3.4)
+
+PLATFORMS
+  arm64-darwin-22
+  ruby
+
+DEPENDENCIES
+  undercover
+  undercover-checkstyle
+
+BUNDLED WITH
+   2.5.2
