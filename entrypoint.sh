@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+cd "${GITHUB_WORKSPACE}" || exit 1
+git config --global --add safe.directory "${GITHUB_WORKSPACE}" || exit 1
+
 undercover-checkstyle \
   --lcov ${INPUT_LCOV} \
   --compare origin/${INPUT_REF} \
