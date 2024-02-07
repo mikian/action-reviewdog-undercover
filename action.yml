@@ -28,7 +28,7 @@ inputs:
     default: ''
   lcov:
     description: Path for Lcov file.
-    default: coverage/workspace.lcov
+    default: coverage/lcov/workspace.lcov
   ref:
     description: Git Ref to compare against
     default: '${{ github.base_ref }}'
