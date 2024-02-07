@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bundle exec undercover-checkstyle \
+undercover-checkstyle \
   --lcov ${INPUT_LCOV} \
   --compare origin/${INPUT_REF} \
   | reviewdog \
